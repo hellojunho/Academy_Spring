@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>제목!</title>
+	</head>
+	<body>
+	<dl>
+		<dt>아이디</dt>
+		<dd th:text="${member.memId}"></dd>
+	</dl>
+	<dl>
+		<dt>회원명</dt>
+		<dd th:text=${member.memNm}"></dd>
+	</dl>
+	<dl>
+		<dt>이메일</dt>
+		<dd th:text="${member.email}"></dd>
+	</dl>
+	<dl>
+		<dt>휴대전화</dt>
+		<dd th:text="${member.mobile}"></dd>
+	</dl>
+	<dl>
+		<dt>가입일자</dt>
+		<dd th:text="${member.regDt}"></dd>
+	</dl>	
+	</body>
+</html>
+
+<!-- 
+<!doctype html>
+<html>
+	<head>
+		<title>Title</title>
+	</head>
+	<body>
+		<dl>
+			<dt>Hello</dt>
+		</dl>
+	</body>
+</html>
+ -->
