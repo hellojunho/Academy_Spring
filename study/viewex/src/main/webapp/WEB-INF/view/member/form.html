@@ -1,0 +1,39 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+	</head>
+
+	<body>
+		<a th:href="@{/hello/{id}(id=${member.memId}, query=${member.memNm})}">Hello 페이지로 이동</a>
+		<!-- 선택 변수식 -->
+		<div th:object="${member}">
+			<dl>
+				<dt>아이디</dt>
+				<!-- div th:object="${member}"로 설정하면 ${member.memId} == *{memId} -->
+				<dd th:text="*{memId}"></dd>
+			</dl>
+			<dl>
+				<dt>회원명</dt>
+				<dd th:text="*{memNm}"></dd>
+			</dl>
+			<dl>
+				<dt>이메일</dt>
+				<dd th:text="*{email}"></dd>
+			</dl>
+			<dl>
+				<dt>전화번호</dt>
+				<dd th:text="*{mobile}"></dd>
+			</dl>
+			<dl>
+				<!--utext: html태그를 적용시켜 출력-->
+				<dt>자기소개</dt>
+				<dd th:utext="*{intro}"></dd> 
+			</dl>
+			<dl>
+				<dt>가입일시</dt>
+				<dd th:text="*{regDt}"></dd>
+			</dl>
+		</div>
+	</body>
+
+</html>

@@ -2,34 +2,20 @@ package models.member;
 
 import java.time.LocalDateTime;
 
+// 회원 정보가 담기는 DTO 객체
 public class Member {
-	
 	private String memId;
-	private String memPw;
 	private String memNm;
-	private String email;	
+	private String email;
 	private String mobile;
 	private LocalDateTime regDt;
-	private LocalDateTime modDt;
-
-	private long memNo;
-	public long getMemNo() {
-		return memNo;
-	}
-	public void setMemNo(long memNo) {
-		this.memNo = memNo;
-	}
+	private String intro;
+	
 	public String getMemId() {
 		return memId;
 	}
 	public void setMemId(String memId) {
 		this.memId = memId;
-	}
-	public String getMemPw() {
-		return memPw;
-	}
-	public void setMemPw(String memPw) {
-		this.memPw = memPw;
 	}
 	public String getMemNm() {
 		return memNm;
@@ -55,15 +41,19 @@ public class Member {
 	public void setRegDt(LocalDateTime regDt) {
 		this.regDt = regDt;
 	}
-	public LocalDateTime getModDt() {
-		return modDt;
+	
+	public String getIntro() {
+		return intro;
 	}
-	public void setModDt(LocalDateTime modDt) {
-		this.modDt = modDt;
+	public void setIntro(String intro) {
+		this.intro = intro;
 	}
+	
 	@Override
 	public String toString() {
-		return "Member [memNo=" + memNo + ", memId=" + memId + ", memPw=" + memPw + ", memNm=" + memNm + ", email="
-				+ email + ", mobile=" + mobile + ", regDt=" + regDt + ", modDt=" + modDt + "]";
+		return "Member [memId=" + memId + ", memNm=" + memNm + ", email=" + email + ", mobile=" + mobile + ", regDt="
+				+ regDt + "]";
 	}
-}   
+	
+	
+}
